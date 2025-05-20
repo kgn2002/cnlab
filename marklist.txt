@@ -1,0 +1,7 @@
+Marklist of Students
+---------------------------------
+Name | Total | Percentage | Grade
+---------------------------------
+Joyal | 212 | 70% | B
+Govindan | 220 | 73% | B
+Akshay | 243 | 81% | A

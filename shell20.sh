@@ -1,17 +1,23 @@
 #!/bin/bash
-echo Enter the number to check prime or not
-read num
-c=0
-for ((i=1; i<=num;i++))
+
+read -p "Enter the limits: " start limit
+
+echo "Prime numbers from $start  up to $limit are:"
+
+for (( num=$start; num<=limit; num++ ))
 do
-if ((num % i == 0))
-then
-c=$((c + 1))
-fi
+    is_prime=1
+    for (( i=2; i*i<=num; i++ ))
+    do
+        if (( num % i == 0 ))
+        then
+            is_prime=0
+            break
+        fi
+    done
+
+    if (( is_prime == 1 ))
+    then
+        echo $num
+    fi
 done
-if [ $c -eq 2 ]
-then
-echo $num is prime
-else
-echo $num is not prime
-fi
